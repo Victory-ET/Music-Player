@@ -9,9 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "algolia": "0.0.0",
+    "algoliasearch": "^4.10.3",
+    "faker": "^5.5.3",
+    "firebase": "^8.9.1",
+    "firebase-admin": "^9.11.1",
     "next": "11.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-audio-player": "^0.17.0",
+    "react-dom": "17.0.2",
+    "react-h5-audio-player": "^3.7.1",
+    "react-instantsearch": "^6.12.1",
+    "react-instantsearch-dom": "^6.12.1",
+    "react-player-controls": "^1.1.0",
+    "search": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "7.32.0",

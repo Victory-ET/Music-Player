@@ -1,0 +1,40 @@
+.uploadpage{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.h{
+    text-align: center;
+}
+
+.uploadform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadform input{
+    margin: 10px 0 15px 0;
+    outline: none;
+    padding: 10px;
+}
+
+.uploadform input[file]{
+    padding: 10px;
+}
+
+
+.uploadform label{
+    text-transform: uppercase;
+}
+
+.uploadform button{
+    border: none;
+    padding: 10px 25px;
+    background: rgb(73, 13, 236);
+    border-radius: 15px;
+    color: #fff;
+}

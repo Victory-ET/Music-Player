@@ -1,0 +1,15 @@
+.container  {
+  font-weight: bold;
+  color: #333;
+}
+
+.top,
+.footer {
+    height: 50px;
+    width: 100%;
+    color:#fff;
+    background: rgb(73, 13, 236);
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}

@@ -1,0 +1,42 @@
+.searchcont {
+  height: 100vh;
+  overflow: auto;
+  width: 60%;
+  padding: 0 10px;
+}
+
+.hit {
+  background: #333;
+  color: #fff;
+  padding: 15px 0 15px 10px;
+  list-style-type: none;
+  border-radius: 5px;
+  box-shadow: 6px 6px 8px rgba(0,0,0,.8), -6px -6px 8px rgba(211, 211, 211, 0.151);
+  margin: 13px 0;
+}
+
+.hit:hover{
+  cursor: pointer;
+}
+
+
+.searchcont li {
+  list-style-type: none!important;
+}
+
+.searchcont ul {
+  padding: 0;
+}
+
+.search input{
+  border: none;
+  padding: 10px 15px;
+  margin: 10px 5px;
+  outline: none;
+}
+
+.search button{
+  border: none;
+  padding: 10px 15px;
+  background: #eee;
+}

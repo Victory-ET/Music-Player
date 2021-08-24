@@ -1,0 +1,63 @@
+.cplayer{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    background: #313131;
+    color:#fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 50px;
+    padding-top: 3px;
+    /* box-shadow: inset -6px -6px 12px rgba(0,0,0,.8); */
+}
+
+.cplayer h4{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+}
+
+.cplayer > p{
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.playerdetails .detailsimg{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.detailsimg img{
+    display: block;
+    margin: 0px auto;
+     height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 12px rgba(0,0,0,.8), -6px -6px 12px rgba(255,255,255,0.4);
+
+}
+
+.detailstitle{
+    color: #eee;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.8), -2px -2px 4px rgba(255,255,255,0.4);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.detailsartist{
+    color: #aaa;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.8), -2px -2px 4px rgba(255,255,255,0.4);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
