@@ -51,20 +51,7 @@ function Upload() {
      });
      alert("Music added");  
     } 
-    
-    // setTimeout(() => {
-      
-    //   const musicname = e.target.musicname.value;
-    //   if (!musicname) {
-    //     return
-    //   }
-    //   db.collection("Music").doc(musicname).set({
-    //     name: musicname,
-    //     music: musicUrl,
-    //     image: fileUrl
-    //   })
-    //   alert("Music added")
-    // }, 10000)
+   
     
 }
     return (
