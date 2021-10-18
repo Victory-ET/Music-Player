@@ -10,15 +10,14 @@ import "firebase/storage"
 function Upload() {
     const [fileUrl, setFileUrl] = React.useState(null)
     const [musicUrl, setMusicUrl] = React.useState(null)
+    const [disable, setDisable] = React.useState(true);
 
     const filechanged = async (e) =>{
         var file = e.target.files[0];
         var storageRef = firebase.storage().ref("Image");
         const fileRef = storageRef.child(file.name)
         await fileRef.put(file)
-        setFileUrl(await fileRef.getDownloadURL())
-      
-        
+        setFileUrl(await fileRef.getDownloadURL())   
     }
     const musicchanged = async (e) =>{
         var music = e.target.files[0];
@@ -26,21 +25,46 @@ function Upload() {
         const musicRef = storagemRef.child(music.name)
         await musicRef.put(music)
         setMusicUrl(await musicRef.getDownloadURL())
-       
+  }
+  
+  React.useEffect(() => {
+    if (musicUrl !== null) {
+      setDisable(false);
+      alert("click on submit")
+      console.log(disable)
     }
+  },[musicUrl])
+  
 
   const submit =  (e) => {
-        
-      e.preventDefault();
-      const musicname = e.target.musicname.value;
-      if (!musicname) {
-        return
-      }
-      db.collection("Music").doc(musicname).set({
-        name: musicname,
-        music: musicUrl,
-        image: fileUrl
-      })
+    
+    e.preventDefault();
+    if (musicUrl != null && fileUrl !== null) {
+    const musicname = e.target.musicname.value;
+     if (!musicname) {
+       return;
+     }
+     db.collection("Music").doc(musicname).set({
+       name: musicname,
+       music: musicUrl,
+       image: fileUrl,
+     });
+     alert("Music added");  
+    } 
+    
+    // setTimeout(() => {
+      
+    //   const musicname = e.target.musicname.value;
+    //   if (!musicname) {
+    //     return
+    //   }
+    //   db.collection("Music").doc(musicname).set({
+    //     name: musicname,
+    //     music: musicUrl,
+    //     image: fileUrl
+    //   })
+    //   alert("Music added")
+    // }, 10000)
     
 }
     return (
@@ -62,7 +86,7 @@ function Upload() {
             placeholder="Music name"
             required
           />
-          <button className={style.btn}>Submit</button>
+          <button className={style.btn} disabled={disable} >Submit</button>
         </form>
       </div>
     );
