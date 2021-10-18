@@ -9,8 +9,8 @@ function Search(props) {
   const [title, setTitle] = React.useState(null);
   const [playing, setPlaying] = React.useState(null);
   const searchClient = algoliasearch(
-    "3XZTW978L4",
-    "9087eae8a6bb684c21c417d8ebb2979f"
+    "algolia id",
+    "algolia key"
   );
   
   props.func(title);
